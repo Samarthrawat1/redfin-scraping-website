@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Redfin Data Fetcher</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+<body>
+  <div class="container">
+    <input type="text" id="urlInput" placeholder="Enter Redfin URL">
+    <button id="addRowButton">Add Row</button>
+    <button id="downloadButton">Download Excel</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Street Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Postal Code</th>
+          <th>Price</th>
+          <th>Bed Room</th>
+          <th>Bath Room</th>
+          <th>Sq. Ft.</th>
+          <th>House Type</th>
+          <th>Built Year</th>
+          <th>Area</th>
+          <th>Price/Sq.Ft</th>
+          <th>Car Parking</th>
+          <th>AC</th>
+          <th>Agent Name</th>
+          <th>Brokerage</th>
+          <th>MLS ID</th>
+          <th>Time on Redfin</th>
+          <th>Buyer's Agent Commission</th>
+          <th>Agent License</th>
+          <th>Contact</th> 
+        </tr>
+      </thead>
+      <tbody id="dataBody">
+        {% for row in initial_data %}
+          <tr>
+            {% for key, value in row.items() %}
+              <td>{{ value }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
