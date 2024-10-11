@@ -1,7 +1,7 @@
 # Redfin Data Scraper & Exporter
 
-[![Deploy to GCP](https://deploy.cloud.run/button.svg)](http://54.235.61.80/)
-
+[![Run on Railway](https://railway.app/brand/logotype-light.svg)](https://redfin-scraping-website-production.up.railway.app/)
+(Click on above icon to view the site, hosted on railway)
 Easily extract key information from Redfin property listings and download the data as an Excel file.
 
 ## Overview
